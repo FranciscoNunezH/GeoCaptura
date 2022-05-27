@@ -21,5 +21,9 @@ para cada dia de operacion un reporte en formato .txt. <br>
 En promedio, cuentan con 1800 lineas de información por cada unidad ( total de 39).
 </p>
 <img src="https://github.com/FranciscoNunezH/GeoCaptura/blob/main/scr/Data.jpg">
+
+<p align="left"> La idea es recolectarla, tranformarla y presentarla. <br>
+ 
+ <em> En Desarrollo... </em>
  
 
