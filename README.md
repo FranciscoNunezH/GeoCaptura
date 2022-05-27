@@ -13,6 +13,8 @@ diferentes rutas de transporte publico de la ciudad. </p>
 necesita la siguiente data: <br>
 - Saber a que hora paso por los diferentes puntos de control.<br>
 - Si llego a tiempo/Tarde/adelantado segun los tiempos asignados.<br>
+ <br>El detalle consiste que la web nos da la informacion pero hay que recolectarla de <br>
+ forma manunal.
  </p>
  
 <h3 align="left"> Recolección de la data: </h3>
@@ -22,8 +24,8 @@ En promedio, cuentan con 1800 lineas de información por cada unidad ( total de 
 </p>
 <img src="https://github.com/FranciscoNunezH/GeoCaptura/blob/main/scr/Data.jpg">
 
-<p align="left"> La idea es recolectarla, tranformarla y presentarla. <br>
+<p align="left"> Usando "Selenium", optimizamos la descarga de los archivos. <br>
  
- <em> En Desarrollo... </em>
+ <em> Nota para mi mismo: Poner gif demostrando </em>
  
 
