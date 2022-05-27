@@ -59,6 +59,6 @@ def descargar_archivos():
     driver.quit()
 
 
-# Press the green button in the gutter to run the script.
+# Ejecutamos el Codigo.
 if __name__ == '__main__':
     descargar_archivos()
