@@ -8,9 +8,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
 
-def descargar_archivos():
-    # Preguntamos al usuario por la fecha.
-    fecha = input("Introduce la Fecha (dd/mm/aaaa): ")
+def descargar_archivos(fecha, directorio_root):
 
     # Obtenemos el directorios de destino raiz
     path = os.path.dirname(__file__)
