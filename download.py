@@ -8,12 +8,22 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
 
-def descargar_archivos(fecha, directorio_root):
+def create_folder(folder):
+    # Verificamos si existe un directorio. Lo creamos si no existe.
+    if not os.path.exists(folder):
+        os.makedirs(folder)
+
+
+def verify_files(d_files):
+    # Verificamos si existen Archivos en el Directorio.
+    if not os.path.exists(d_files):
+        pass
+
+
+def descargar_archivos(fecha, path, download_folder):
 
     # Obtenemos el directorios de destino raiz
-    path = os.path.dirname(__file__)
     driver_path = Service(path + '\\chromedriver.exe')
-    download_folder = (path + '\\Descargas')
 
     # Definimos las opciones para chrome, definir el directorio de descarga.
     prefs = {'download.default_directory': download_folder}
@@ -26,7 +36,7 @@ def descargar_archivos(fecha, directorio_root):
     # Ir GeoConnect, introcimos credenciales, iniciamos sesion.
     driver.get("http://201.144.109.78:8080/login.jsp?n=0")
     driver.find_element(By.NAME, 'Username').send_keys('15-SurDalias')
-    driver.find_element(By.NAME, 'Password').send_keys('**********')
+    driver.find_element(By.NAME, 'Password').send_keys('dalias9768')
     login_button = driver.find_element(By.NAME, 'Submit')
     login_button.click()
 
