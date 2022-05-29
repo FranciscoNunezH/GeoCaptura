@@ -36,7 +36,7 @@ def descargar_archivos(fecha, path, download_folder):
     # Ir GeoConnect, introcimos credenciales, iniciamos sesion.
     driver.get("http://201.144.109.78:8080/login.jsp?n=0")
     driver.find_element(By.NAME, 'Username').send_keys('15-SurDalias')
-    driver.find_element(By.NAME, 'Password').send_keys('dalias9768')
+    driver.find_element(By.NAME, 'Password').send_keys('********')
     login_button = driver.find_element(By.NAME, 'Submit')
     login_button.click()
 
