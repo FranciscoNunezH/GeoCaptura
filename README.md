@@ -1,4 +1,4 @@
-# GeoCaptura
+# GeoCaptura { Extract, Transform, Load }
 
 <img src="https://github.com/FranciscoNunezH/GeoCaptura/blob/main/scr/Geoconnect%20%20Image.jpg" width="1200">
 
@@ -7,30 +7,48 @@
 Esta web fue desarrollada por un tercero, allá por el 2003 cuyo objetivo <br>
 era ( y sigue siendo ) es el monitoreo de los intinerarios de trabajo de las <br>
 diferentes rutas de transporte publico de la ciudad. </p>
-
-<h3 align="left"> El Problema: </h3>
-<p align="left"> El monitoreo de las diferentes rutas de transporte publico <br>
-necesita la siguiente data: <br>
-- Saber a que hora paso por los diferentes puntos de control.<br>
-- Si llego a tiempo/Tarde/adelantado segun los tiempos asignados.<br>
- <br>El detalle consiste que la web nos da la informacion pero hay que recolectarla de <br>
- forma manunal.
- </p>
  
-<h3 align="left"> Recolección de la data: </h3>
+<h3 align="left"> Extract: </h3>
 <p align="left"> La Pagina GeoConnect, nos permite descargar por cada unidad <br>
 para cada dia de operacion un reporte en formato .txt. <br>
-En promedio, cuentan con 1800 lineas de información por cada unidad ( total de 39).
+Hay que cargar la pagina, seleccionando la fecha y la unidad, asi como navegar <br>
+A traves de una serie de opciones, para llegar al apartado donde descargamos <br>
+Es necesario hacer esto para cada unidad. <br>
+</p>
+<img src="https://github.com/FranciscoNunezH/GeoCaptura/blob/main/scr/Data.jpg">
+<p align="left"> Usando "Selenium", optimizamos la descarga de los archivos. <br>
+ 
+<h3 align="left"> Transform: </h3>
+<p align="left"> Los archivos de texto que descargamos anteriormente <br>
+En promedio, cuentan con 1800 lineas de información por cada unidad ( total de 39).<br>
+Cada linea contiene:
+
+- Codigo de Unidad [ Concesion ]
+- Codigo de Operador
+- Fecha y Hora [ En Zona Horaria GTM ]
+- Latitud
+- Longitud
+- Velocidad
+- I/O
+- Validador
+ 
+Necesitamos, limpiar la data, solo nos interesa:
+ 
+- Codigo de Unidad ---> Para identificar de que unidad se trata.
+- Fecha y Hora ---> Transformada a Zona horaria Local. [ MX ]
+- Latitud y Longitud ---> Transformar coordenadas Geograficas a "human-readable address"
+- Velocidad
+
+ 
 </p>
 <img src="https://github.com/FranciscoNunezH/GeoCaptura/blob/main/scr/Data.jpg">
 
 <p align="left"> Usando "Selenium", optimizamos la descarga de los archivos. <br>
  
+ 
 <br>
-<h3 align="left"> Cargando la Data en la Base de Datos {MongoDB}: </h3>
-<p align="left"> La Pagina GeoConnect, nos permite descargar por cada unidad <br>
-para cada dia de operacion un reporte en formato .txt. <br>
-En promedio, cuentan con 1800 lineas de información por cada unidad ( total de 39).
+<h3 align="left"> Load {MongoDB}: </h3>
+<p align="left"> Cargamos la información ya transformada, a nuestra base de datos. <br>
 </p>
 
 <br>
