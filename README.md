@@ -26,6 +26,6 @@ En promedio, cuentan con 1800 lineas de información por cada unidad ( total de 
 
 <p align="left"> Usando "Selenium", optimizamos la descarga de los archivos. <br>
  
- <em> Nota para mi mismo: Poner gif demostrando </em>
+ <em> Sigo trabajando en esta pagina... :page_with_curl: </em>
  
 
