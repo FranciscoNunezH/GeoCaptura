@@ -5,7 +5,7 @@ import os
 from download import *
 from transform import *
 
-# Press the green button in the gutter to run the script.
+# Inicializamos el Script.
 if __name__ == '__main__':
 
     # Variables necesarias para ejecutar descarga_archivos
