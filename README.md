@@ -15,8 +15,9 @@ Hay que cargar la pagina, seleccionando la fecha y la unidad, asi como navegar <
 A traves de una serie de opciones, para llegar al apartado donde descargamos <br>
 Es necesario hacer esto para cada unidad. <br>
 </p>
-<img src="https://github.com/FranciscoNunezH/GeoCaptura/blob/main/scr/Data.jpg">
+<img src="https://github.com/FranciscoNunezH/GeoCaptura/blob/main/scr/Descarga%20Manual.gif?raw=true">
 <p align="left"> Usando "Selenium", optimizamos la descarga de los archivos. <br>
+<img src="https://github.com/FranciscoNunezH/GeoCaptura/blob/main/scr/Auto%20Descarga.gif?raw=true">
  
 <h3 align="left"> Transform: </h3>
 <p align="left"> Los archivos de texto que descargamos anteriormente <br>
@@ -39,11 +40,9 @@ Necesitamos, limpiar la data, solo nos interesa:
 - Latitud y Longitud ---> Transformar coordenadas Geograficas a "human-readable address"
 - Velocidad
 
- 
 </p>
 <img src="https://github.com/FranciscoNunezH/GeoCaptura/blob/main/scr/Data.jpg">
 
-<p align="left"> Usando "Selenium", optimizamos la descarga de los archivos. <br>
  
  
 <br>
